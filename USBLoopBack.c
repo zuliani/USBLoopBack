@@ -43,19 +43,6 @@ DeclareCounter(SysTimerCnt);
 static int pos_x = 0;
 static int pos_y = 0;
 
-static void showInitScreen(void)
-{
-    pos_x = 0;
-    pos_y = 0;
-
-    display_clear(0);
-    display_goto_xy(0, 0);
-    display_string("USBLoopBack");
-    display_goto_xy(0, 1);
-    display_string("Run tester.py");
-    display_update();
-}
-
 static void display_string_with_offset(U8 *data, int offset)
 {
     char buffer[MAX_NUM_OF_CHAR+1];
@@ -92,6 +79,15 @@ static void display_string_with_offset(U8 *data, int offset)
             pos_y = 0;
         }
     }
+}
+
+static void showInitScreen(void)
+{
+    pos_x = 0;
+    pos_y = 0;
+
+    display_clear(0);
+    display_string_with_offset("USBLoopBack. Run USBLoopBackTester.py", 0);
 }
 
 /* ECRobot hooks */
