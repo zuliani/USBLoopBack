@@ -1,3 +1,4 @@
+
 /*!
  * \file USBLoopBack.h
  *
@@ -21,8 +22,8 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-#ifndef _USB_TEST_H
-#define _USB_TEST_H
+#ifndef _USBLOOPBACK_H
+#define _USBLOOPBACK_H
 
 #define DISCONNECT_REQ 0xFF
 #define COMM_STRING 0x01
